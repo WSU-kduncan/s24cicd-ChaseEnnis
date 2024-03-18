@@ -20,6 +20,7 @@
    * ![Dockerfile](images/docker.png)
 3. Setting Up
    * ` docker build -t chase_image -f /home/ubuntu/ceg3120/project4/Dockerfile /home/ubuntu/ceg3120/project4` (Builds the image)
+      * ![build](images/building.png)
    * `docker run -d -p 80:80 chase_image`
    * `docker run -d -p 8080:80 chase_image`
       * `-d` : detached mode which runs container in background
