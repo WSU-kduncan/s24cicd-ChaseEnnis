@@ -18,7 +18,7 @@
    * [Containerize an Application](https://docs.docker.com/get-started/02_our_app/)
 2. Configuring `Dockerfile`:
    * ![Dockerfile](images/docker.png)
-3. Setting Up
+3. Building Image and Running the Container
    * ` docker build -t chase_image -f /home/ubuntu/ceg3120/project4/Dockerfile /home/ubuntu/ceg3120/project4` (Builds the image)
       * ![build](images/building.png)
    * `docker run -d -p 80:80 chase_image`
@@ -30,6 +30,9 @@
    * ![docker images](images/dockerimages.png)
    * ![docker ps -a](images/dockerpsa.png)
       * It is normal for the container IDs to be different. Every time the container is run, a new instance of that container is created
+   * ![8080](images/8080.png)
+   * ![80](images/80.png)
+
     
 
 
