@@ -35,7 +35,7 @@
    * ![80](images/80.png)
       * Because of `docker run -d -p 80:80 chase_image` specifying `80` (http) works
    * Curling Private IP Address of the Container:
-      * 
+      * ![curl private ip](images/curlprivateip.png)
 5. Issues
    * My biggest issue while setting this up was that I had `apache2` (the service) running on port 80, so then my container could not run on port 80. Once I grasped how this was actually working, it was understandable why.
 
