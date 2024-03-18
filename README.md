@@ -31,23 +31,13 @@
    * ![docker ps -a](images/dockerpsa.png)
       * It is normal for the container IDs to be different. Every time the container is run, a new instance of that container is created
    * ![8080](images/8080.png)
+      * Because of `docker run -d -p 8080:80 chase_image` specifying `8080` works
    * ![80](images/80.png)
+      * Because of `docker run -d -p 80:80 chase_image` specifying `80` (http) works
+   * Curling Private IP Address of the Container:
+      * 
+5. Issues
+   * My biggest issue while setting this up was that I had `apache2` (the service) running on port 80, so then my container could not run on port 80. Once I grasped how this was actually working, it was understandable why.
 
     
-
-
-
-
-Documentation
-Create README-CI.md in main folder of your repo that details the following:
-
-CI Project Overview
-(what are you doing, why, what tools)
-Run Project Locally
-how to install docker + dependencies (WSL2, for example)
-how to build an image from the Dockerfile
-how to run the container
-how to view the project running in the container (open a browser...go to IP and port...)
-
-
 
