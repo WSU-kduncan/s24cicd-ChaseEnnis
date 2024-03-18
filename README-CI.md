@@ -16,9 +16,15 @@
    * sudo usermod -aG docker $USER (allows docker commands to be run without `root`
    * ![Status](images/working.png)
    * [Containerize an Application](https://docs.docker.com/get-started/02_our_app/)
-2. Configuring `Dockerfile`:
+2. `docker` service commands:
+   * `sudo systemctl start docker`: start docker
+   * `sudo systemctl stop docker`: stop docker
+   * `sudo systemctl status docker`: check docker status
+   * `sudo docker ps -a`: lists all containers (running and stopped)
+   * `docker images`: lists docker images
+3. Configuring `Dockerfile`:
    * ![Dockerfile](images/docker.png)
-3. Building Image and Running the Container
+4. Building Image and Running the Container
    * ` docker build -t chase_image -f /home/ubuntu/ceg3120/project4/Dockerfile /home/ubuntu/ceg3120/project4` (Builds the image)
       * ![build](images/building.png)
    * `docker run -d -p 80:80 chase_image`
@@ -26,7 +32,7 @@
       * `-d` : detached mode which runs container in background
       * `-p 8080:80`: maps port `8080` on the host to port `80` inside the container
       * `chase_image`: name of the image
-4. Proof
+5. Proof
    * ![docker images](images/dockerimages.png)
    * ![docker ps -a](images/dockerpsa.png)
       * It is normal for the container IDs to be different. Every time the container is run, a new instance of that container is created
@@ -37,7 +43,7 @@
    * Curling Private IP Address of the Container:
       * ![curl private ip](images/curlprivateip.png)
       * Note this image curls my site. My changes are further below, but this picture serves the purpose.
-5. Issues
+6. Issues
    * My biggest issue while setting this up was that I had `apache2` (the service) running on port 80, so then my container could not run on port 80. Once I grasped how this was actually working, it was understandable why.
 
     
