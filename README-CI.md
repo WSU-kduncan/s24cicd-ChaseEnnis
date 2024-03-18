@@ -4,6 +4,8 @@
 
 ### Part 1
 
+> This part of the lab, I create a `docker` container to host and run the contents of my site
+
 1. Installing `docker`:
    * `sudo apt update`
    * `sudo apt install -y apt-transport-https ca-certificates curl software-properties-common`
@@ -13,7 +15,7 @@
    * `sudo apt install docker-ce`
    * `sudo systemctl start docker`
    * `sudo systemctl enable docker`
-   * sudo usermod -aG docker $USER (allows docker commands to be run without `root`
+   * `sudo usermod -aG docker $USER` (allows docker commands to be run without `root`)
    * ![Status](images/working.png)
    * [Containerize an Application](https://docs.docker.com/get-started/02_our_app/)
 2. `docker` service commands:
@@ -22,8 +24,14 @@
    * `sudo systemctl status docker`: check docker status
    * `sudo docker ps -a`: lists all containers (running and stopped)
    * `docker images`: lists docker images
+   * [Docker Commands Cheat Sheet](https://www.geeksforgeeks.org/docker-cheat-sheet/)
 3. Configuring `Dockerfile`:
    * ![Dockerfile](images/docker.png)
+       * `FROM ubuntu:latest`: specifies the base image will be the most recent Ubuntu image
+       * `RUN apt-get update && \ apt-get install -y apache2`: installs `apache2`
+       * `COPY website/ /var/www/html/`: copies the website contents to the `apache2` hosting directory
+       * `EXPOSE 80`: specifies docker listens on port 80 at runtime
+       * `CMD ["apache2ctl", "-D", "FOREGROUND"]`: allows `apache2` http to run in the foreground which allows `docker` to run the container. If `apache2` the service was running, docker would be unable to also run on port 80 (see below)
 4. Building Image and Running the Container
    * ` docker build -t chase_image -f /home/ubuntu/ceg3120/project4/Dockerfile /home/ubuntu/ceg3120/project4` (Builds the image)
       * ![build](images/building.png)
