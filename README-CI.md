@@ -2,7 +2,7 @@
 
 ## Name: Chase Ennis  
 
-### Part 1
+### Part 1 - Dockerize It
 
 > This part of the lab, I create a `docker` container to host and run the contents of my site
 
@@ -55,5 +55,50 @@
    * My biggest issue while setting this up was that I had `apache2` (the service) running on port 80, so then my container could not run on port 80. Once I grasped how this was actually working, it was understandable why.
    * When I stop my instance and restart it, I have to stop `apache2` the service (`sudo systemctl stop apache2`) and start the container (Ex: `docker start ce107b951017`)
 
+### Part 2 
+
+1. Create `DockerHub` Account
+2. Create Public `DockerHub` Repository
+   * Mine is called `chase_project4_image`
+3. Authenticate into `DockerHub` via command line
+   * Command to do so is `docker login --username DOCKER_USERNAME --password DOCKER_PASSWORD`
+   * ![Login](images/part2/dockerlogin.png)
+   * Obviously I covered my password up
+4. Pushing to `DockerHub` without GitHub Actions
+   * `docker tag chase_image buckeyechase135/chase_project4_image:latest`
+      * creates a new tag for `chase_image` with the repository name `buckeyechase135/chase_project4_image` and the tag `latest`
+   * `docker push buckeyechase135/chase_project4_image:latest`
+      * pushes the image to `DockerHub`
     
+
+
+
+
+Create DockerHub account: https://hub.docker.com/
+select Free tier if prompted
+Create Public Repository in DockerHub
+Set GitHub Secrets named DOCKER_USERNAME and DOCKER_PASSWORD with your respective information filled out.
+Set up GitHub Actions workflow to build and push docker image to DockerHub
+Documentation
+Add to README-CI.md to include:
+
+Process to create public repo in DockerHub
+
+How to authenticate with DockerHub via CLI using Dockerhub credentials
+
+what credentials would you recommend providing?
+How to push container image to Dockerhub (without GitHub Actions)
+
+Link to your DockerHub repository
+
+Configuring GitHub Secrets
+
+How to set a secret
+What secret(s) are set for this project
+Note: do not copy paste your secrets into your documentation
+Behavior of GitHub workflow
+
+what does it do and when
+what variables in workflow are custom to your project
+think may need to be changed if someone else is going to use it or you reuse it
 
