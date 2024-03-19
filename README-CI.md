@@ -134,7 +134,7 @@ What secret(s) are set for this project
 Note: do not copy paste your secrets into your documentation
 Behavior of GitHub workflow
 
-what does it do and when
+what doe
 what variables in workflow are custom to your project
 think may need to be changed if someone else is going to use it or you reuse it
 
