@@ -4,8 +4,6 @@
 
 ### Part 1 - Dockerize It
 
-> This part of the lab, I create a `docker` container to host and run the contents of my site
-
 1. Installing `docker`:
    * `sudo apt update`
    * `sudo apt install -y apt-transport-https ca-certificates curl software-properties-common`
@@ -68,6 +66,7 @@
 4. Pushing to `DockerHub` without GitHub Actions
    * `docker tag chase_image buckeyechase135/chase_project4_image:latest`
       * creates a new tag for `chase_image` with the repository name `buckeyechase135/chase_project4_image` and the tag `latest`
+      * effectively creates an alias for `chase_ennis` to refer to it as `buckeyechase135/chase_project4_image:latest`
    * `docker push buckeyechase135/chase_project4_image:latest`
       * pushes the image to `DockerHub`
    * ![pushing to DockerHub](images/part2/push.png)
@@ -109,9 +108,13 @@
             run: docker push buckeyechase135/chase_project4_image:latest
 
    ```
-  7. Testing
+7. Testing
      * To test that this works I made changes to my file, set up a commit, and pushed. Then I went to `GitHub` browser and went to `Actions` and there was a yellow circle swirling letting me know that something was in progress. After a few seconds, it turned green. I went into `DockerHub` and my repository had been updated despite the fact that I had not made any changes to my image.
      * Everytime I make a change, this action file executes and my image is run again. This is why it is still run even if the changes do not directly involve the image.
+8. Summary
+    * The `DOCKER_USERNAME` and `DOCKER_PASSWORD` variables are local to my project. No one else shares my username and password so they would have to customize those secrets on their own account so that the `main.yml` file would work to their environment.
+    * Obviously the repository names and the tags inside this file would need to be changed if this were to be reused.
+    * In Summary, this pretty much makes `GitHub` commit my image again every time I make a commit to my repository.
 9. Resources:
    * [Introduction to GitHub Actions](https://docs.docker.com/build/ci/github-actions/)
    * [Build and Push Docker Images](https://github.com/marketplace/actions/build-and-push-docker-images)
