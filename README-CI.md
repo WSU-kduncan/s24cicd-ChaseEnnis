@@ -74,9 +74,10 @@
    * [Link to My Repository](https://hub.docker.com/r/buckeyechase135/chase_project4_image)
 5. Setting Up GitHub Secrets
    * Go to `Settings` ... `Secrets and Variables` ... `Actions` ... Under `Repository Secrets` click `New Repository Secret`
+   * The secrets are the username and password for `DockerHub` so that I can set up my workflow (see below) between `GitHub` and `DockerHub`. These are the two fields that are needed to sign into the account. Adding these as repository secrets allows me to automate the building and pushing process.
    * ![Repository Secrets](images/part2/secrets.png)
 6. Setting Up GitHub Workflow
-   * On GitHub Browser inside my repository ... `Actions` ... `Set Up a Workflow Yourself` ... this will take my to a hidden repository called `.github/workflows` and let me start editing a file.
+   * On GitHub Browser inside my repository ... `Actions` ... `Set Up a Workflow Yourself` ... this will take my to a hidden repository called `.github/workflows` and let me start editing a file named `main.yml`.
    * Add the following contents:
   ```
     name: Build and Push Docker chase_project4_image
