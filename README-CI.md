@@ -53,6 +53,7 @@
       * Note this image curls my site. My changes are further below, but this picture serves the purpose.
 6. Issues
    * My biggest issue while setting this up was that I had `apache2` (the service) running on port 80, so then my container could not run on port 80. Once I grasped how this was actually working, it was understandable why.
+   * When I stop my instance and restart it, I have to stop `apache2` the service (`sudo systemctl stop apache2`) and start the container (Ex: `docker start ce107b951017`)
 
     
 
