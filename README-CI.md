@@ -75,13 +75,44 @@
 5. Setting Up GitHub Secrets
    * Go to `Settings` ... `Secrets and Variables` ... `Actions` ... Under `Repository Secrets` click `New Repository Secret`
    * ![Repository Secrets](images/part2/secrets.png)
+6. Setting Up GitHub Workflow
+   * On GitHub Browser inside my repository ... `Actions` ... `Set Up a Workflow Yourself` ... this will take my to a hidden repository called `.github/workflows` and let me start editing a file.
+   * Add the following contents:
+  ```
+    name: Build and Push Docker chase_project4_image
+    
+    on:
+      push:
+        branches:
+          - main
+    
+    jobs:
+      build:
+        runs-on: ubuntu-latest
+    
+        steps:
+          - name: Checkout code
+            uses: actions/checkout@v2
+    
+          - name: Login to DockerHub
+            uses: docker/login-action@v2
+            with:
+              username: ${{ secrets.DOCKER_USERNAME }}
+              password: ${{ secrets.DOCKER_PASSWORD }}
+    
+          - name: Build Docker image
+            run: docker build -t buckeyechase135/chase_project4_image:latest .
+    
+          - name: Push Docker image
+            run: docker push buckeyechase135/chase_project4_image:latest
+
+   ```
+8. Resources:
+   * [Introduction to GitHub Actions](https://docs.docker.com/build/ci/github-actions/)
+   * [Build and Push Docker Images](https://github.com/marketplace/actions/build-and-push-docker-images)
 
 
 
-Create DockerHub account: https://hub.docker.com/
-select Free tier if prompted
-Create Public Repository in DockerHub
-Set GitHub Secrets named DOCKER_USERNAME and DOCKER_PASSWORD with your respective information filled out.
 Set up GitHub Actions workflow to build and push docker image to DockerHub
 Documentation
 Add to README-CI.md to include:
