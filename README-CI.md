@@ -69,6 +69,8 @@
       * creates a new tag for `chase_image` with the repository name `buckeyechase135/chase_project4_image` and the tag `latest`
    * `docker push buckeyechase135/chase_project4_image:latest`
       * pushes the image to `DockerHub`
+   * ![pushing to DockerHub](images/part2/push.png)
+   * ![DockerHub Interface](images/part2/dockerhub.png)
     
 
 
