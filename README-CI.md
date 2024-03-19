@@ -59,6 +59,7 @@
 
 1. Create `DockerHub` Account
 2. Create Public `DockerHub` Repository
+   * Option that says `Create Repository`
    * Mine is called `chase_project4_image`
 3. Authenticate into `DockerHub` via command line
    * Command to do so is `docker login --username DOCKER_USERNAME --password DOCKER_PASSWORD`
@@ -108,33 +109,12 @@
             run: docker push buckeyechase135/chase_project4_image:latest
 
    ```
-8. Resources:
+  7. Testing
+     * To test that this works I made changes to my file, set up a commit, and pushed. Then I went to `GitHub` browser and went to `Actions` and there was a yellow circle swirling letting me know that something was in progress. After a few seconds, it turned green. I went into `DockerHub` and my repository had been updated despite the fact that I had not made any changes to my image.
+     * Everytime I make a change, this action file executes and my image is run again. This is why it is still run even if the changes do not directly involve the image.
+9. Resources:
    * [Introduction to GitHub Actions](https://docs.docker.com/build/ci/github-actions/)
    * [Build and Push Docker Images](https://github.com/marketplace/actions/build-and-push-docker-images)
 
 
-
-Set up GitHub Actions workflow to build and push docker image to DockerHub
-Documentation
-Add to README-CI.md to include:
-
-Process to create public repo in DockerHub
-
-How to authenticate with DockerHub via CLI using Dockerhub credentials
-
-what credentials would you recommend providing?
-How to push container image to Dockerhub (without GitHub Actions)
-
-Link to your DockerHub repository
-
-Configuring GitHub Secrets
-
-How to set a secret
-What secret(s) are set for this project
-Note: do not copy paste your secrets into your documentation
-Behavior of GitHub workflow
-
-what doe
-what variables in workflow are custom to your project
-think may need to be changed if someone else is going to use it or you reuse it
 
