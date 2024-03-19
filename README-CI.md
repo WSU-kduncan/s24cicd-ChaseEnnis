@@ -72,7 +72,9 @@
    * ![pushing to DockerHub](images/part2/push.png)
    * ![DockerHub Interface](images/part2/dockerhub.png)
    * [Link to My Repository](https://hub.docker.com/r/buckeyechase135/chase_project4_image)
-
+5. Setting Up GitHub Secrets
+   * Go to `Settings` ... `Secrets and Variables` ... `Actions` ... Under `Repository Secrets` click `New Repository Secret`
+   * ![Repository Secrets](images/part2/secrets.png)
 
 
 
