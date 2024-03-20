@@ -44,6 +44,7 @@
       * It is normal for the container IDs to be different. Every time the container is run, a new instance of that container is created
    * ![8080](images/part1/8080.png)
       * Because of `docker run -d -p 8080:80 chase_image` specifying `8080` works
+      * Any request on my local system at port `8080` will redirect to port `80`
    * ![80](images/part1/80.png)
       * Because of `docker run -d -p 80:80 chase_image` specifying `80` (http) works
    * Curling Private IP Address of the Container:
