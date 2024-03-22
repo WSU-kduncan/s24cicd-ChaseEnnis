@@ -120,5 +120,16 @@
    * [Introduction to GitHub Actions](https://docs.docker.com/build/ci/github-actions/)
    * [Build and Push Docker Images](https://github.com/marketplace/actions/build-and-push-docker-images)
 
+### Part 3 - Diagram
 
+1. Diagram
+   * ![Diagram](images/part3/diagram.png)
+2. Explanation
+   * `Apache` runs my site
+   * `Docker` hosts `Apache` on port 80. Note that `Apache` (the service) is not running on port 80 rather `Docker` is.
+   * `Docker` builds and runs the Container Image which is pushed to `DockerHub`. This can be done with and without `Github`. Part 1 was without `Github` and Part 2 was with `GitHub`
+   * `DockerHub` has UserName and Password to authenticate.
+   * My `Github` repository (inside the repository secrets) stores the values to the UserName and Password
+   * When I commit and then push from my local terminal, `Github` executes my `main.yml` action file which accesses the `DockerHub` UserName and Password to authenticate into my account and then builds the Container Image. Then the Container Image is set to automatically push to `DockerHub`
+   * Even if I change my `README-CI.md` file, and commit and push that from my local terminal, the actions will automatically authenticate to `DockerHub` and build and push my Container Image. 
 
