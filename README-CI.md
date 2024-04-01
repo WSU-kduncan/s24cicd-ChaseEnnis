@@ -116,10 +116,11 @@
     * The `DOCKER_USERNAME` and `DOCKER_PASSWORD` variables are local to my project. No one else shares my username and password so they would have to customize those secrets on their own account so that the `main.yml` file would work to their environment.
     * Obviously the repository names and the tags inside this file would need to be changed if this were to be reused.
     * In Summary, this pretty much makes `GitHub` commit my image again to `DockerHub` every time I make a commit and change on my `main` branch.
-9. Resources:
+9. Resources
    * [Introduction to GitHub Actions](https://docs.docker.com/build/ci/github-actions/)
    * [Build and Push Docker Images](https://github.com/marketplace/actions/build-and-push-docker-images)
-
+10. DockerHub Repository
+    * [DockerHub Repository](https://hub.docker.com/repository/docker/buckeyechase135/chase_project4_image/general)
 ### Part 3 - Diagram
 
 1. Diagram
