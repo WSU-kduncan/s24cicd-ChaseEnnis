@@ -90,8 +90,8 @@
            * references `tags` and `labels` from the `metadata` action
 7. [Updated DockerHub Repository](https://hub.docker.com/repository/docker/buckeyechase135/chase_project4_image/tags?page=1&ordering=last_updated)
 8. Proof:
-    * ![DockerHub Image](part2images/dockerhub1.png)
-    * ![DockerHub Image](part2images/dockerhub2.png)
+    * ![DockerHub Image](project5images/dockerhub1.png)
+    * ![DockerHub Image](project5images/dockerhub2.png)
       
 
 
