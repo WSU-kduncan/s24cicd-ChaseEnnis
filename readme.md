@@ -2,16 +2,14 @@
   
 ## Name: Chase Ennis       
 
-
-
-
 ### Part 1: Semantic Versioning
 
 1. Project Overview:
    * I am being asked to modify my workflow (`main.yml`) from project 4 to automatically build and push the image to dockerhub when I push the tag to github.
 2. Semantic Versioning Format:
    * `Major`.`Minor`.`Patch`
-   * For this project, I focus on `{{major}}`, `{{major}}.{{minor}}`, `latest` and the way my workflow is set up also includes `main` 
+   * For this project, I focus on `{{major}}`, `{{major}}.{{minor}}`, `latest` and the way my workflow is set up also includes `main` and `{{major}}.{{minor}}` with whatever else comes after it (which would be the full semantic version as seen below in the image with `1.5.0`)
+   * So my `DockerHub` Repository has 5 things (as seen below)
    * [Semantic Versioning](https://semver.org/)
 3. Generating a Tag:
    * `git tag -a v1.0.0 -m "Version 1.0.0"`
@@ -90,14 +88,11 @@
            * references `tags` and `labels` from the `metadata` action
 7. [Updated DockerHub Repository](https://hub.docker.com/repository/docker/buckeyechase135/chase_project4_image/tags?page=1&ordering=last_updated)
 8. Proof:
-    * ![DockerHub Image](part2images/dockerhub1.png)
-    * ![DockerHub Image](part2images/dockerhub2.png)
+    * ![DockerHub Image](project5images/dockerhub1.png)
+    * ![DockerHub Image](project5images/dockerhub2.png)
 
 
 ### Part 2: Deployment
-
-
-
 
 
 ### Part 3: Diagramming
