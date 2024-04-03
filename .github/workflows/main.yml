@@ -45,5 +45,7 @@ jobs:
         with:
           context: .
           push: ${{ github.event_name != 'pull_request' }}
-          tags: ${{ steps.meta.outputs.tags }}
+          tags: |
+            buckeyechase135/chase_project4_image:${{ steps.meta.outputs.tags }}
+            buckeyechase135/chase_project4_image:latest
           labels: ${{ steps.meta.outputs.labels }}
