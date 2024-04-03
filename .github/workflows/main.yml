@@ -3,12 +3,12 @@ name: Build and Push Docker chase_project4_image
 on:
   push:
     branches:
-      - 'master'
+      - 'main'
     tags:
       - 'v*.*'
   pull_request:
     branches:
-      - 'master'
+      - 'main'
 
 jobs:
   docker:
