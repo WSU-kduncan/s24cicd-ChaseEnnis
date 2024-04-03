@@ -92,6 +92,7 @@
 8. Proof:
     * ![DockerHub Image](part2images/dockerhub1.png)
     * ![DockerHub Image](part2images/dockerhub2.png)
+      
 
 
 ### Part 2: Deployment
