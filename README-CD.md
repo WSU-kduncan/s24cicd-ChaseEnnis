@@ -13,10 +13,10 @@
 3. Generating a Tag:
    * `git tag -a v1.0.0 -m "Version 1.0.0"`
      * `-a`: creates annnoted tag
-   * `git push origin --tags`
+   * `git push origin --tags` or `git push origin v1.0.0`
 4. Deleting a Tag:
    * `git tag -d v1.0.0`
-   * ` git push --delete origin v1.0.0`
+   * ` git push --delete origin v1.0.0` 
 5. Updated `main.yml` file:
 
 ```
