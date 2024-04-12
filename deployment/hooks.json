@@ -1,0 +1,14 @@
+[
+  {
+    "id": "webhook",
+    "execute-command": "/home/ubuntu/deploy.sh",
+    "command-working-directory": "/home/ubuntu",
+    "response-message": "Deployment script executed successfully!"
+  },
+  {
+    "id": "pizza",
+    "execute-command": "/home/ubuntu/deploy.sh",
+    "command-working-directory": "/home/ubuntu",
+    "response-message": "Deployment script executed successfully!"
+  }
+]
