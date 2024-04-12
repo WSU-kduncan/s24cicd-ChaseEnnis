@@ -48,3 +48,9 @@ jobs:
           push: ${{ github.event_name != 'pull_request' }}
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
+
+      - 
+        name: Send Webhook
+        if: github.event_name != 'pull_request'
+        run: |
+          curl -X POST -H "Content-Type: application/json" -d '{"value": "webhook"}' http://3.226.234.210:9000/hooks/webhook
