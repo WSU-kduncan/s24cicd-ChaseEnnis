@@ -134,6 +134,9 @@
        * ![hooks.json](project5images/hooksjson.png)
     3. Modify the Configuration file  found in `/lib/systemd/system` directory
        * ![webhook.service](project5images/webhookservice.png)
+    4. Update GitHub Workflow:
+       * ![update workflow](project5images/updateWorkflow.png)
+    5. 
        
 Container restart script
 
