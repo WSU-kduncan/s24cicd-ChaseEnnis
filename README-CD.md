@@ -103,11 +103,15 @@
    * `sudo systemctl enable docker`
    * `sudo usermod -aG docker $USER` (allows docker commands to be run without `root`)
    * ![proof](project5images/installdocker.png)
+2. Pull and Run a container from DockerHub image
+   * Pull Container: `docker pull buckeyechase135/chase_project4_image:latest`
+   * Run Container: `sudo docker run -d -p 80:80 buckeyechase135/chase_project4_image`
+   * I used my Instance from another class (`3.226.234.210`)
+   * Proof
+      * ![Terminal](project5images/startcontainer.png)
+      * ![Browser](project5images/browser.png)
 
 
-
-
-How to install Docker to your instance
 
 Container restart script
 
