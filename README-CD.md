@@ -125,6 +125,7 @@
        * `docker run -d -p 80:80 --name $CONTAINER_NAME --restart always $IMAGE_NAME`
    * ![script proof](project5images/runScript.png)
 4. Set a listener / hook to receive messages using `adnanh` webhook
+   * Important Note: In order to get it to work I had to run `sudo ufw allow 9000`
     1. Install `webhook`:
        * `sudo apt update`
        * `sudo apt install webhook`
