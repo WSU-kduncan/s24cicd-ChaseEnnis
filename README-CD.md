@@ -145,6 +145,10 @@
    * GitHub sends a message to the hook which will then pull the new container image
    * ![update workflow](project5images/updateWorkflow.png)
 8. Proof
+   * ![commit and tag]([project5images/tag.png)
+   * ![github action proof](project5images/githubactionproof.png)
+   * ![dockerhub proof](project5images/dockerhubproof.png)
+   * ![webhook log proof](project5images/webhookproof.png)
        
 
 ### Part 3: Diagramming
