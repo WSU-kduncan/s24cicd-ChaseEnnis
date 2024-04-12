@@ -1,4 +1,4 @@
-![image](https://github.com/WSU-kduncan/s24cicd-ChaseEnnis/assets/114534995/aa76e749-e55e-411e-b08c-48f32e42bb11)# Project 5: Introduction to the Design of Information Technology Systems - CEG3120
+# Project 5: Introduction to the Design of Information Technology Systems - CEG3120
    
 ## Name: Chase Ennis       
 
@@ -123,7 +123,7 @@
        * `docker pull $IMAGE_NAME`
    * Runs new container
        * `docker run -d -p 80:80 --name $CONTAINER_NAME --restart always $IMAGE_NAME`
-   * ![sript proof](project5images/runScript.png)
+   * ![script proof](project5images/runScript.png)
 
 
 Container restart script
