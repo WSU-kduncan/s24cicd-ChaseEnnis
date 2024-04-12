@@ -112,7 +112,9 @@
       * ![Browser](project5images/browser.png)
 3. Create Script that pulls a new image from DockerHub and restart the container
    * Script is called `deploy.sh` and can be found in the `deployment` directory
-   * Please not for mine to work I gave it the name `chase_image` which I have been using the entire time: `sudo docker run -d -p 8080:80 --name chase_image buckeyechase135/chase_project4_image`
+   * For mine to work I gave it the name `chase_image` which I have been using the entire time: `sudo docker run -d -p 8080:80 --name chase_image buckeyechase135/chase_project4_image`
+   * This script is good for someone who wants to run my image because it ensures that the latest version of the container image is being used each time
+   * I would recommend putting it inside of the `/home/` directory because that ensures that the person trying to use it can access it.
    * My script uses variables
        * `IMAGE_NAME="buckeyechase135/chase_project4_image"`
        * `CONTAINER_NAME="chase_image"`
@@ -127,38 +129,22 @@
    * ![script proof](project5images/runScript.png)
 4. Set a listener / hook to receive messages using `adnanh` webhook
    * Important Note: In order to get it to work I had to run `sudo ufw allow 9000`
-    1. Install `webhook`:
+   * Installing and starting `webhook`:
        * `sudo apt update`
        * `sudo apt install webhook`
-    2. Set up the hook json file `hooks.json` (I used the one we used in class)
-       * ![hooks.json](project5images/hooksjson.png)
-    3. Modify the Configuration file  found in `/lib/systemd/system` directory
-       * ![webhook.service](project5images/webhookservice.png)
-    4. Update GitHub Workflow:
-       * ![update workflow](project5images/updateWorkflow.png)
-    5. 
+       * `sudo systemctl restart webhook.service`
+5. Set up the hook json file `hooks.json` (I used the one we used in class)
+   * This file sets the conditions and hooks in which triggers the `webhook` service
+   * The hooks are `deploy` and `pizza` so anytime in the browser I run `http://3.226.234.210:9000/hooks/webhook` or `http://3.226.234.210:9000/hooks/pizza` the listener executes and responds in the logs.
+   * I would recommend putting the `hooks.json` in the home directory because that is easy for the user to remember. That is what we did in class. Obviously, if the user wants to be more organized they could create a folder. The important thing is that they have access and permission to where it is stored.
+   * ![hooks.json](project5images/hooksjson.png)
+6. Modify the Configuration file  found in `/lib/systemd/system` directory
+   * Essentially, this sends a curl request to `http://3.226.234.210:9000/hooks/webhook` which will activate the script
+   * ![webhook.service](project5images/webhookservice.png)
+7. Update GitHub Workflow:
+   * GitHub sends a message to the hook which will then pull the new container image
+   * ![update workflow](project5images/updateWorkflow.png)
+8. Proof
        
-Container restart script
-
-Justification & description of what it does
-Where it should be on the instance (if someone were to use your setup)
-Setting up a webhook on the instance
-
-How to install adnanh's webhook to the instance
-How to start the webhook
-since our instance's reboot, we need to handle this
-webhook task definition file
-
-Description of what it does
-Where it should be on the instance (if someone were to use your setup)
-How to configure GitHub OR DockerHub to message the listener
-
-Provide proof that the CI & CD workflow work. This means:
-
-starting with a commit that is a change, taging the commit, pushing the tag
-Showing your GitHub workflow returning a message of success.
-Showing DockerHub has freshly pushed images.
-Showing the instance that you are deploying to has the container updated.
-Proof can be provided by either demonstrating to me in person OR by creating a video of the process. If you go the video route and your file is too large for GitHub, submit it to the "Project 5 - Proof of Flow" Dropbox on Pilot
 
 ### Part 3: Diagramming
