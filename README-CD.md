@@ -1,7 +1,7 @@
 # Project 5: Introduction to the Design of Information Technology Systems - CEG3120
    
 ## Name: Chase Ennis       
-
+ 
 ### Part 1: Semantic Versioning
 
 1. Project Overview:
@@ -145,6 +145,7 @@
    * GitHub sends a message to the hook which will then pull the new container image
    * ![update workflow](project5images/updateWorkflow.png)
 8. Proof
+   * See images
        
 
 ### Part 3: Diagramming
