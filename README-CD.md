@@ -102,7 +102,7 @@
    * `sudo systemctl start docker`
    * `sudo systemctl enable docker`
    * `sudo usermod -aG docker $USER` (allows docker commands to be run without `root`)
-   * ![proof](images/project5images/installdocker.png)
+   * ![proof](project5images/installdocker.png)
 
 
 
