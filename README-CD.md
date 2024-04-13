@@ -151,7 +151,9 @@
       * ![github action proof](project5images/githubactionproof.png)
       * ![dockerhub proof](project5images/dockerhubproof.png)
       * ![webhook log proof](project5images/webhookproof.png)
-   * Video Proof
-       
 
-### Part 3: Diagramming
+### Part 3: Diagramming/Explanation
+
+1. Explanation:
+2. Diagram:
+    *![Diagram](project5images/diagram.png)
