@@ -91,7 +91,9 @@
     * ![DockerHub Image](project5images/dockerhub2.png)
       
 ### Part 2: Deployment
-
+* NOTE: In order for the process to work I need my ceg2410 instance (`3.226.234.210`) to be running.
+* NOTE: Stop `Apache` the service and start `Docker` on port 80
+  
 1. Installing `docker`:
    * `sudo apt update`
    * `sudo apt install -y apt-transport-https ca-certificates curl software-properties-common`
