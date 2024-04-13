@@ -156,4 +156,4 @@
 
 1. Explanation:
 2. Diagram:
-    *![Diagram](project5images/diagram.png)
+     * ![Diagram](project5images/diagram.png)
