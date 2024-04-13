@@ -133,6 +133,7 @@
        * `sudo apt update`
        * `sudo apt install webhook`
        * `sudo systemctl restart webhook.service`
+       * Command to see live logs: `sudo journalctl -u webhook.service -f`
 5. Set up the hook json file `hooks.json` (I used the one we used in class)
    * This file sets the conditions and hooks in which triggers the `webhook` service
    * The hooks are `deploy` and `pizza` so anytime in the browser I run `http://3.226.234.210:9000/hooks/webhook` or `http://3.226.234.210:9000/hooks/pizza` the listener executes and responds in the logs.
