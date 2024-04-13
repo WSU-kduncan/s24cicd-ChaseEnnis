@@ -155,5 +155,13 @@
 ### Part 3: Diagramming/Explanation
 
 1. Explanation:
-2. Diagram:
+    1. Commiting/tagging from GitHub Triggers an Event in the GitHub Workflow Actions
+    2. The Workflow builds and pushes the New Tagged Images to DockerHub
+    3. The Workflow sends a workflow event curl request to `http://3.226.234.210:9000/hooks/webhook`
+    4. The webhook service views the hooks/conditions that have been set in the `hooks.json` file which runs the `deploy.sh` script if met
+    5. The `deploy.sh` script deletes, pulls, and restarts the container image
+    6. The Instance which runs both services: `webhook` and `docker` (`docker` runs the image which is hosted on DockerHub)
+    7. The Instance can view the live updates of the service which update throughout the entire process: `sudo journalctl -u webhook.service -f`
+    8. In summary, this ensures my Docker container is automatically updated when changes are pushed to GitHub.
+3. Diagram:
      * ![Diagram](project5images/diagram.png)
