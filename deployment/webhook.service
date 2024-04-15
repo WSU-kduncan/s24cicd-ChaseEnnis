@@ -5,6 +5,8 @@ ConditionPathExists=/home/ubuntu/hooks.json
 
 [Service]
 ExecStart=/usr/bin/webhook -nopanic -hooks /home/ubuntu/hooks.json -verbose
+Restart=always
+RestartSec=10
 
 [Install]
 WantedBy=multi-user.target
