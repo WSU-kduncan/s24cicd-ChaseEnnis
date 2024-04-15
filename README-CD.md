@@ -154,7 +154,7 @@
       * ![dockerhub proof](project5images/dockerhubproof.png)
       * ![webhook log proof](project5images/webhookproof.png)
 
-### Part 3: Diagramming/Explanation
+### Part 3: Diagramming/Explanation 
 
 1. Explanation:
     1. Commiting/tagging from GitHub Triggers an Event in the GitHub Workflow Actions
