@@ -143,6 +143,9 @@
    * ![hooks.json](project5images/hooksjson.png)
 6. Modify the Configuration file  found in `/lib/systemd/system` directory
    * Essentially, this sends a curl request to `http://3.226.234.210:9000/hooks/webhook` which will activate the script
+   * The config file is enabled to make it start automatically
+   * Also run `sudo systemctl enable webhook` to start automatically
+   * To just start the service run `sudo systemctl start webhook`
    * ![webhook.service](project5images/webhookservice.png)
 7. Update GitHub Workflow:
    * GitHub sends a message to the hook which will then pull the new container image
