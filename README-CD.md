@@ -139,6 +139,7 @@
 5. Set up the hook json file `hooks.json` (I used the one we used in class)
    * This file sets the conditions and hooks in which triggers the `webhook` service
    * The hooks are `deploy` and `pizza` so anytime in the browser I run `http://3.226.234.210:9000/hooks/webhook` or `http://3.226.234.210:9000/hooks/pizza` the listener executes and responds in the logs.
+   * ![success](project5images/success.png)
    * I would recommend putting the `hooks.json` in the home directory because that is easy for the user to remember. That is what we did in class. Obviously, if the user wants to be more organized they could create a folder. The important thing is that they have access and permission to where it is stored.
    * ![hooks.json](project5images/hooksjson.png)
 6. Modify the Configuration file  found in `/lib/systemd/system` directory
